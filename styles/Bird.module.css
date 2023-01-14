@@ -1,0 +1,83 @@
+.container{
+    width: 80vw; 
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.image{
+    width: 15rem;
+    border-radius: 0.5rem;
+}
+
+.card{
+    width: 15rem;
+    margin: auto;
+    height: 14rem;
+    border-radius: 0.5rem;
+    background-color: gainsboro;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    box-shadow: 7px 7px 5px grey;
+}
+
+.ccontainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.cbody{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.birdName{
+    margin-left: 1rem;
+    font-size: 2rem;
+    width: 13rem;
+    text-shadow: 5px 4px 5px grey;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+}
+
+.cost{
+    margin-left: 2rem;
+    font-size: 1.3rem;
+    text-shadow: 5px 4px 5px grey;
+    width: 13rem;
+    font-family: 'Nunito Sans', sans-serif;   
+    font-weight: bold;
+}
+
+.unit{
+    font-size: 1rem;
+    font-family: 'Nunito Sans', sans-serif;   
+    font-weight: bold;
+    text-shadow: 5px 4px 5px grey;
+}
+
+.cos{
+    font-size: 1rem;
+    font-family: 'Nunito Sans', sans-serif; 
+    font-weight: bold;
+    text-shadow: 5px 4px 5px grey;
+}
+
+.btn{
+    padding: 0.2rem;
+    width: 5rem;
+    margin-top: 0.5rem;
+    box-shadow: 5px 5px 5px grey;
+    background-color: mintcream;
+    border: 1px solid;
+    border-radius: 0.2rem;
+    font-family: 'Nunito Sans', sans-serif;
+    cursor: pointer;
+}

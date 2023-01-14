@@ -1,0 +1,62 @@
+.image{
+    position: absolute;
+    top: 2.4rem;
+    left: 1rem;
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.container{
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    width: 20rem;
+    background-color: #FFFFFF;
+    z-index: 10;
+}
+
+.position{
+    position: absolute;
+    left: 0;
+}
+
+.cross{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    scale: 1.2;
+}
+
+.cross:hover{
+    scale: 1.4;
+}
+
+.dheading{
+    margin-top: 0.5rem;
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    padding-bottom: 9px;
+    padding-top: 2px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.space{
+    margin-top: 0.5rem;
+}
+
+.listheading{
+    font-weight: 500;
+}
+
+.listtext{
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+}

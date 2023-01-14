@@ -1,0 +1,85 @@
+.container{
+    width: 80vw;
+    margin: auto;
+    height: auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.cardimg{
+    border-radius: 0.5rem;
+    box-shadow: 9px 5px 8px #aaaaaa;
+    cursor: pointer;
+}
+
+.topimg{
+    margin-left: 0.5rem;
+}
+
+.botimg{
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+@media screen and (min-width:300px) and (max-width:500px) {
+    .container{
+        width: 95vw;
+        align-items: center;
+        justify-content: center;
+    }
+    .cardimg{
+        height: auto;
+        width: 18rem;
+    }
+    .topimg{
+        margin-top: 0.5rem;
+    }
+}
+
+@media screen and (min-width:501px) and (max-width:650px) {
+    .container{
+        width: 95vw;
+        align-items: center;
+        justify-content: center;
+    }
+    .cardimg{
+        height: auto;
+        width: 25rem;
+    }
+    .topimg{
+        margin-top: 0.5rem;
+    }
+}
+
+@media screen and (min-width:651px) and (max-width:1000px) {
+    .container{
+        width: 95vw;
+        align-items: center;
+        justify-content: center;
+    }
+    .cardimg{
+        height: auto;
+        width: 30rem;
+    }
+    .topimg{
+        margin-top: 0.5rem;
+    }
+}
+
+@media screen and (min-width:1001px) and (max-width:1200px) {
+    .container{
+        width: 95vw;
+        align-items: center;
+        justify-content: center;
+    }
+    .cardimg{
+        height: auto;
+        width: 27rem;
+    }
+    .topimg{
+        margin-top: 0.5rem;
+    }
+}

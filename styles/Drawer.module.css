@@ -60,3 +60,9 @@
     color: black;
     font-size: 1.1rem;
 }
+
+@media screen and (min-width:300px) and (max-width:500px) {
+    .image{
+        top: 2.28rem;
+    }
+}

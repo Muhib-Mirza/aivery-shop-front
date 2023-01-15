@@ -41,6 +41,7 @@ const Drawer = () => {
                 className={` ${style.listtext}`}
                 whileHover={{ scale: 1.2, originX: 0 }}
                 transition={{ type: "spring", stiffness: 140 }}
+                onClick={remove}
               >
                 1. Albino Black Eye
               </motion.li>
@@ -52,6 +53,7 @@ const Drawer = () => {
                 className={` ${style.listtext}`}
                 whileHover={{ scale: 1.2, originX: 0 }}
                 transition={{ type: "spring", stiffness: 140 }}
+                onClick={remove}
               >
                 2 . Albino Red Eye
               </motion.li>
@@ -63,6 +65,7 @@ const Drawer = () => {
                 className={` ${style.listtext}`}
                 whileHover={{ scale: 1.2, originX: 0 }}
                 transition={{ type: "spring", stiffness: 140 }}
+                onClick={remove}
               >
                 3. Parblue Split Ino
               </motion.li>
@@ -74,6 +77,7 @@ const Drawer = () => {
                 className={` ${style.listtext}`}
                 whileHover={{ scale: 1.2, originX: 0 }}
                 transition={{ type: "spring", stiffness: 140 }}
+                onClick={remove}
               >
                 4. Cremino
               </motion.li>
@@ -85,6 +89,7 @@ const Drawer = () => {
                 className={` ${style.listtext}`}
                 whileHover={{ scale: 1.2, originX: 0 }}
                 transition={{ type: "spring", stiffness: 140 }}
+                onClick={remove}
               >
                 5. Pastle Ino
               </motion.li>
@@ -99,6 +104,7 @@ const Drawer = () => {
                 className={` ${style.listtext}`}
                 whileHover={{ scale: 1.2, originX: 0 }}
                 transition={{ type: "spring", stiffness: 140 }}
+                onClick={remove}
               >
                 1. Green Opaline
               </motion.li>
@@ -110,6 +116,7 @@ const Drawer = () => {
                 className={` ${style.listtext}`}
                 whileHover={{ scale: 1.2, originX: 0 }}
                 transition={{ type: "spring", stiffness: 140 }}
+                onClick={remove}
               >
                 2 . Green Euwing Opalines
               </motion.li>
@@ -121,6 +128,7 @@ const Drawer = () => {
                 className={` ${style.listtext}`}
                 whileHover={{ scale: 1.2, originX: 0 }}
                 transition={{ type: "spring", stiffness: 140 }}
+                onClick={remove}
               >
               3. Green Opalines Split Blue
               </motion.li>
@@ -132,6 +140,7 @@ const Drawer = () => {
                 className={` ${style.listtext}`}
                 whileHover={{ scale: 1.2, originX: 0 }}
                 transition={{ type: "spring", stiffness: 140 }}
+                onClick={remove}
               >
                 4. Green Euwing / blue
               </motion.li>
@@ -143,6 +152,7 @@ const Drawer = () => {
                 className={` ${style.listtext}`}
                 whileHover={{ scale: 1.2, originX: 0 }}
                 transition={{ type: "spring", stiffness: 140 }}
+                onClick={remove}
               >
                 5. Blue Euwing Opalines
               </motion.li>
@@ -154,6 +164,7 @@ const Drawer = () => {
                 className={` ${style.listtext}`}
                 whileHover={{ scale: 1.2, originX: 0 }}
                 transition={{ type: "spring", stiffness: 140 }}
+                onClick={remove}
               >
                 6. Parblue Opalines
               </motion.li>
@@ -165,6 +176,7 @@ const Drawer = () => {
                 className={` ${style.listtext}`}
                 whileHover={{ scale: 1.2, originX: 0 }}
                 transition={{ type: "spring", stiffness: 140 }}
+                onClick={remove}
               >
                 7. Green/ opaline/Parblue
               </motion.li>

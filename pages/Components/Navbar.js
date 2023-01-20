@@ -23,7 +23,7 @@ const Navbar = () => {
     <>
       <nav className={style.navbar}>
         <ul className={style.container}>
-          <Link href="/" className={style.Link}>
+          <a href="/" className={style.Link}>
             <motion.li
               variants={animateHover}
               initial="init"
@@ -33,7 +33,7 @@ const Navbar = () => {
             >
               Home
             </motion.li>
-          </Link>
+          </a>
           <a href="tel:+923070408790" className={style.Link}>
             <motion.li
             variants={animateHover}

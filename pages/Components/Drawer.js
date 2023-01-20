@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import style from "../../styles/Drawer.module.css";
 import { RxCross1 } from "react-icons/rx";
-import Link from "next/link";
 
 let x = 1;
 const Drawer = () => {
@@ -34,154 +33,142 @@ const Drawer = () => {
         <h2 className={style.dheading}>Morning Star Aivary</h2>
         <h2 className={`${style.dheading} ${style.space}`}>Categories</h2>
         <h1 className={`${style.dheading} ${style.listheading}`}>Love Birds</h1>
-        <ol>
-          <Link href="/ab" className={`${style.link}`}>
+        <ol className={style.list}>
+          <a href="/ab" className={`${style.link}`}>
             <motion.div className={`${style.dheading}`}>
               <motion.li
                 className={` ${style.listtext}`}
-                whileHover={{ scale: 1.2, originX: 0 }}
-                transition={{ type: "spring", stiffness: 140 }}
-                onClick={remove}
+                whileHover={{ scale: 1.1, originX: 0 }}
+                transition={{ type: "spring", stiffness: 140, duration:0.2 }}
               >
                 1. Albino Black Eye
               </motion.li>
             </motion.div>
-          </Link>
-          <Link href="/ar" className={`${style.link}`}>
+          </a>
+          <a href="/ar" className={`${style.link}`}>
             <motion.div className={`${style.dheading}`}>
               <motion.li
                 className={` ${style.listtext}`}
-                whileHover={{ scale: 1.2, originX: 0 }}
-                transition={{ type: "spring", stiffness: 140 }}
-                onClick={remove}
+                whileHover={{ scale: 1.1, originX: 0 }}
+                transition={{ type: "spring", stiffness: 140, duration:0.2 }}
               >
                 2 . Albino Red Eye
               </motion.li>
             </motion.div>
-          </Link>
-          <Link href="/psi" className={`${style.link}`}>
+          </a>
+          <a href="/psi" className={`${style.link}`}>
             <motion.div className={`${style.dheading}`}>
               <motion.li
                 className={` ${style.listtext}`}
-                whileHover={{ scale: 1.2, originX: 0 }}
-                transition={{ type: "spring", stiffness: 140 }}
-                onClick={remove}
+                whileHover={{ scale: 1.1, originX: 0 }}
+                transition={{ type: "spring", stiffness: 140,duration:0.2 }}
               >
                 3. Parblue Split Ino
               </motion.li>
             </motion.div>
-          </Link>
-          <Link href="/crm" className={`${style.link}`}>
+          </a>
+          <a href="/crm" className={`${style.link}`}>
             <motion.div className={`${style.dheading}`}>
               <motion.li
                 className={` ${style.listtext}`}
-                whileHover={{ scale: 1.2, originX: 0 }}
-                transition={{ type: "spring", stiffness: 140 }}
-                onClick={remove}
+                whileHover={{ scale: 1.1, originX: 0 }}
+                transition={{ type: "spring", stiffness: 140,duration:0.2 }}
               >
                 4. Cremino
               </motion.li>
             </motion.div>
-          </Link>
-          <Link href="/pin" className={`${style.link}`}>
+          </a>
+          <a href="/pin" className={`${style.link}`}>
             <motion.div className={`${style.dheading}`}>
               <motion.li
                 className={` ${style.listtext}`}
-                whileHover={{ scale: 1.2, originX: 0 }}
-                transition={{ type: "spring", stiffness: 140 }}
-                onClick={remove}
+                whileHover={{ scale: 1.1, originX: 0 }}
+                transition={{ type: "spring", stiffness: 140,duration:0.2 }}
               >
                 5. Pastle Ino
               </motion.li>
             </motion.div>
-          </Link>
+          </a>
         </ol>
         <h1 className={`${style.dheading} ${style.listheading}`}>Opalines</h1>
         <ol>
-          <Link href="/gop" className={`${style.link}`}>
+          <a href="/gop" className={`${style.link}`}>
             <motion.div className={`${style.dheading}`}>
               <motion.li
                 className={` ${style.listtext}`}
-                whileHover={{ scale: 1.2, originX: 0 }}
-                transition={{ type: "spring", stiffness: 140 }}
-                onClick={remove}
+                whileHover={{ scale: 1.1, originX: 0 }}
+                transition={{ type: "spring", stiffness: 140,duration:0.2 }}
               >
                 1. Green Opaline
               </motion.li>
             </motion.div>
-          </Link>
-          <Link href="/geo" className={`${style.link}`}>
+          </a>
+          <a href="/geo" className={`${style.link}`}>
             <motion.div className={`${style.dheading}`}>
               <motion.li
                 className={` ${style.listtext}`}
-                whileHover={{ scale: 1.2, originX: 0 }}
-                transition={{ type: "spring", stiffness: 140 }}
-                onClick={remove}
+                whileHover={{ scale: 1.1, originX: 0 }}
+                transition={{ type: "spring", stiffness: 140,duration:0.2 }}
               >
                 2 . Green Euwing Opalines
               </motion.li>
             </motion.div>
-          </Link>
-          <Link href="/gosb" className={`${style.link}`}>
+          </a>
+          <a href="/gosb" className={`${style.link}`}>
             <motion.div className={`${style.dheading}`}>
               <motion.li
                 className={` ${style.listtext}`}
-                whileHover={{ scale: 1.2, originX: 0 }}
-                transition={{ type: "spring", stiffness: 140 }}
-                onClick={remove}
+                whileHover={{ scale: 1.1, originX: 0 }}
+                transition={{ type: "spring", stiffness: 140,duration:0.2 }}
               >
               3. Green Opalines Split Blue
               </motion.li>
             </motion.div>
-          </Link>
-          <Link href="/gesb" className={`${style.link}`}>
+          </a>
+          <a href="/gesb" className={`${style.link}`}>
             <motion.div className={`${style.dheading}`}>
               <motion.li
                 className={` ${style.listtext}`}
-                whileHover={{ scale: 1.2, originX: 0 }}
-                transition={{ type: "spring", stiffness: 140 }}
-                onClick={remove}
+                whileHover={{ scale: 1.1, originX: 0 }}
+                transition={{ type: "spring", stiffness: 140 ,duration:0.2}}
               >
                 4. Green Euwing / blue
               </motion.li>
             </motion.div>
-          </Link>
-          <Link href="/beo" className={`${style.link}`}>
+          </a>
+          <a href="/beo" className={`${style.link}`}>
             <motion.div className={`${style.dheading}`}>
               <motion.li
                 className={` ${style.listtext}`}
-                whileHover={{ scale: 1.2, originX: 0 }}
-                transition={{ type: "spring", stiffness: 140 }}
-                onClick={remove}
+                whileHover={{ scale: 1.1, originX: 0 }}
+                transition={{ type: "spring", stiffness: 140,duration:0.2 }}
               >
                 5. Blue Euwing Opalines
               </motion.li>
             </motion.div>
-          </Link>
-          <Link href="/po" className={`${style.link}`}>
+          </a>
+          <a href="/po" className={`${style.link}`}>
             <motion.div className={`${style.dheading}`}>
               <motion.li
                 className={` ${style.listtext}`}
-                whileHover={{ scale: 1.2, originX: 0 }}
-                transition={{ type: "spring", stiffness: 140 }}
-                onClick={remove}
+                whileHover={{ scale: 1.1, originX: 0 }}
+                transition={{ type: "spring", stiffness: 140,duration:0.2 }}
               >
                 6. Parblue Opalines
               </motion.li>
             </motion.div>
-          </Link>
-          <Link href="/gsosp" className={`${style.link}`}>
+          </a>
+          <a href="/gsosp" className={`${style.link}`}>
             <motion.div className={`${style.dheading}`}>
               <motion.li
                 className={` ${style.listtext}`}
-                whileHover={{ scale: 1.2, originX: 0 }}
-                transition={{ type: "spring", stiffness: 140 }}
-                onClick={remove}
+                whileHover={{ scale: 1.1, originX: 0 }}
+                transition={{ type: "spring", stiffness: 140,duration:0.2 }}
               >
                 7. Green/ opaline/Parblue
               </motion.li>
             </motion.div>
-          </Link>
+          </a>
         </ol>
         <h1 className={`${style.dheading} ${style.listheading}`}>Fishers</h1>
       </motion.div>

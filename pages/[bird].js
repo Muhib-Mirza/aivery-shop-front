@@ -1,6 +1,7 @@
 import Head from "next/head";
 import style from "../styles/Bird.module.css";
 import {motion} from "framer-motion";
+import axios from "axios";
 
 export const getStaticPaths = async ()=>{
     const res = await fetch("https://morning-star-aivary.onrender.com/alldata");
@@ -20,9 +21,10 @@ export const getStaticPaths = async ()=>{
 }
 
 export const getStaticProps = async ( context )=>{
-    console.log(context.params.bird);
-    const res = await fetch("https://morning-star-aivary.onrender.com/"+context.params.bird);
-    const data = await res.json();
+    let data;
+    const res = await axios.get("https://morning-star-aivary.onrender.com/"+context.params.bird).then((result)=>{
+        data = result.data;
+    })
 
     return{
         props:{

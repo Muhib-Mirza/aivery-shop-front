@@ -2,7 +2,7 @@ import Head from "next/head";
 import style from "../styles/Bird.module.css";
 import {motion} from "framer-motion";
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export const getStaticPaths = async ()=>{
     console.log("Called");
@@ -24,11 +24,7 @@ export const getStaticPaths = async ()=>{
 
 export const getStaticProps = async ( context )=>{
     console.log("Called");
-    let data;
-    const res = await axios.get("https://morning-star-aivary.onrender.com/"+context.params.bird).then((result)=>{
-        data = result.data;
-    })
-
+    let data= context.params.bird;
     return{
         props:{
             data:data
@@ -37,8 +33,13 @@ export const getStaticProps = async ( context )=>{
 }
 
 const Bird = ({ data }) => {
+    const [state,setState] = useState(null);
+    const [flag, setFlag] = useState(0);
     useEffect(()=>{
-        getStaticProps;
+        const res = axios.get("https://morning-star-aivary.onrender.com/"+data).then((result)=>{
+        setState(result.data);
+        setFlag(1);
+    })
     },[]);
     return ( 
         <>
@@ -49,7 +50,7 @@ const Bird = ({ data }) => {
         <link rel="icon" href="/parrot.png" />
       </Head>
       <div className={`${style.container}`}>
-        {data.map(curElem=>{
+        { flag === 1? state.map(curElem=>{
             const image = btoa(
                 String.fromCharCode(...new Uint8Array(curElem.image.data.data)));
                 return <div key={curElem._id} className={style.ccontainer}>
@@ -74,7 +75,8 @@ const Bird = ({ data }) => {
                     </div>
                 </div>
                 </div>
-        })}
+        }):<h1>Hello World</h1>
+    }
         </div>
         </>
      );

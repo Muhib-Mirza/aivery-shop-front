@@ -4,6 +4,7 @@
     height: 100vh;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .form{
@@ -47,4 +48,48 @@
     font-weight: bold;
     box-shadow: 5px 5px 8px gray;
     border: 2px solid #79E0EF;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    height:13rem;
+    margin-left: 0.5rem;
+    border: 4px solid #083339;
+    box-shadow: 5px 5px 8px gray;
+    background-color:#03424C;
+    color: white;
+    font-weight: 900;
+}
+
+.ul{
+    list-style: none;
+}
+
+.head{
+    align-self: center;
+}
+
+.listitem{
+    width: 14rem;
+    display: inline-block;
+    margin-top: 0.3rem;
+}
+
+.incwidth{
+    width: 15rem !important;
+}
+
+@media screen and (min-width:300px) and (max-width:500px) {
+    .ul{
+        font-size: small;
+    }
+    .listitem{
+        width: 8.5rem;
+        margin-left: 0.5rem;
+    }
+    .incwidth{
+        width: 8.5rem !important;
+    }
 }

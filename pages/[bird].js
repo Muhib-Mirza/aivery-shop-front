@@ -31,6 +31,7 @@ export const getStaticProps = async ( context )=>{
 }
 
 const Bird = ({ data }) => {
+    getStaticProps;
     const [state,setState] = useState(null);
     const [flag, setFlag] = useState(0);
     useEffect(()=>{
@@ -49,7 +50,9 @@ const Bird = ({ data }) => {
       </Head>
       {
         state === null ? 
-        <h1>Hello World</h1> 
+        <div class="loader">
+        <div class="circle"></div>
+        </div>
         :
       
       <div className={`${style.container}`}>

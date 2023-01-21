@@ -48,15 +48,10 @@ const Bird = ({ data }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/parrot.png" />
       </Head>
-      {
-        state === null ? 
-        <div class="loader">
-        <div class="circle"></div>
-        </div>
-        :
-      
       <div className={`${style.container}`}>
-        { flag === 1? state.map(curElem=>{
+        { state === null?<div class="loader">
+        <div class="circle"></div>
+        </div> : state.map(curElem=>{
             const image = btoa(
                 String.fromCharCode(...new Uint8Array(curElem.image.data.data)));
                 return <div key={curElem._id}>
@@ -83,12 +78,9 @@ const Bird = ({ data }) => {
                 </div>
                 </div>
                 </div>
-        }):<div class="loader">
-        <div class="circle"></div>
-        </div>
+        })
     }
         </div>
-        }
         </>
      );
 }

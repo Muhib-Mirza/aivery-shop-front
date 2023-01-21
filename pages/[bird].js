@@ -2,8 +2,10 @@ import Head from "next/head";
 import style from "../styles/Bird.module.css";
 import {motion} from "framer-motion";
 import axios from "axios";
+import { useEffect } from "react";
 
 export const getStaticPaths = async ()=>{
+    console.log("Called");
     const res = await fetch("https://morning-star-aivary.onrender.com/alldata");
     const data = await res.json();
     const paths = data.map(curElem=>{
@@ -21,6 +23,7 @@ export const getStaticPaths = async ()=>{
 }
 
 export const getStaticProps = async ( context )=>{
+    console.log("Called");
     let data;
     const res = await axios.get("https://morning-star-aivary.onrender.com/"+context.params.bird).then((result)=>{
         data = result.data;
@@ -34,6 +37,9 @@ export const getStaticProps = async ( context )=>{
 }
 
 const Bird = ({ data }) => {
+    useEffect(()=>{
+        getStaticProps;
+    },[]);
     return ( 
         <>
         <Head>

@@ -22,7 +22,6 @@ export const getStaticPaths = async ()=>{
 }
 
 export const getStaticProps = async ( context )=>{
-    console.log("Called");
     let data= context.params.bird;
     return{
         props:{
@@ -48,6 +47,11 @@ const Bird = ({ data }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/parrot.png" />
       </Head>
+      {
+        state === null ? 
+        <h1>Hello World</h1> 
+        :
+      
       <div className={`${style.container}`}>
         { flag === 1? state.map(curElem=>{
             const image = btoa(
@@ -81,6 +85,7 @@ const Bird = ({ data }) => {
         </div>
     }
         </div>
+        }
         </>
      );
 }

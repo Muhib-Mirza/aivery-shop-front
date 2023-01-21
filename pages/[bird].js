@@ -31,7 +31,7 @@ export const getStaticProps = async ( context )=>{
 }
 
 const Bird = ({ data }) => {
-    getStaticProps;
+    getStaticPaths;
     const [state,setState] = useState(null);
     const [flag, setFlag] = useState(0);
     useEffect(()=>{

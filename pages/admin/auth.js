@@ -1,3 +1,4 @@
+import Head from "next/head";
 import axios from "axios";
 import Router from "next/router";
 import React,{ useState } from "react";
@@ -26,6 +27,12 @@ const Auth = () => {
     }
     return ( 
         <>
+        <Head>
+        <title>Morning Star Aivary</title>
+        <meta name="description" content="We have best quality of love birds" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/parrot.png" />
+      </Head>
         <div className={style.container}>
         <form onSubmit={handleSubmit} className={style.form} >
             <input className={`${style.input}`} type="email" placeholder="Enter Email" name="email" value={user.email} onChange={handleChange} />

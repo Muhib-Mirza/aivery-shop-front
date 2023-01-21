@@ -5,7 +5,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 export const getStaticPaths = async ()=>{
-    console.log("Called");
     const res = await fetch("https://morning-star-aivary.onrender.com/alldata");
     const data = await res.json();
     const paths = data.map(curElem=>{
@@ -53,7 +52,8 @@ const Bird = ({ data }) => {
         { flag === 1? state.map(curElem=>{
             const image = btoa(
                 String.fromCharCode(...new Uint8Array(curElem.image.data.data)));
-                return <div key={curElem._id} className={style.ccontainer}>
+                return <div key={curElem._id}>
+                    <div className={style.ccontainer}>
                     <div className={style.card}>
                     <img src={`data:img/png;base64,${image}`} alt="" className={`${style.image}`} />
                     <div className={`${style.cbody}`}>
@@ -75,7 +75,10 @@ const Bird = ({ data }) => {
                     </div>
                 </div>
                 </div>
-        }):<h1>Hello World</h1>
+                </div>
+        }):<div class="loader">
+        <div class="circle"></div>
+        </div>
     }
         </div>
         </>

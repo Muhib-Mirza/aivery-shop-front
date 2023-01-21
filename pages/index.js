@@ -16,10 +16,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/parrot.png" />
       </Head>
-      <Carousel />
       {
         flag === 1?
         <>
+        <Carousel />
         <Card />
         </>
         :<div class="loader">

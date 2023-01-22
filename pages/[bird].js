@@ -22,12 +22,12 @@ const Test = ({data}) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/parrot.png" />
       </Head>
+      <div className={style.body}>
       <div className={`${style.container}`}>
     { data.map(curElem=>{
         const image = btoa(
-            String.fromCharCode(...new Uint8Array(curElem.image.data.data)));
+            String.fromCharCode(...new Uint32Array(curElem.image.data.data)));
             return <div key={curElem._id}>
-                <div className={style.ccontainer}>
                 <div className={style.card}>
                 <img src={`data:img/png;base64,${image}`} alt="" className={`${style.image}`} />
                 <div className={`${style.cbody}`}>
@@ -49,10 +49,10 @@ const Test = ({data}) => {
                 </div>
             </div>
             </div>
-            </div>
     })
 }
     </div>       
+    </div>
         </>
      );
 }

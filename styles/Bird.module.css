@@ -1,6 +1,6 @@
 .container{
     width: 80vw; 
-    height: 100vh;
+    height: auto;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -8,6 +8,7 @@
 }
 
 .image{
+    height: 11rem;
     width: 15rem;
     border-radius: 0.5rem;
 }
@@ -15,7 +16,7 @@
 .card{
     width: 15rem;
     margin: auto;
-    height: 14rem;
+    height: auto;
     border-radius: 0.5rem;
     background-color: gainsboro;
     margin-top: 1rem;
@@ -23,18 +24,11 @@
     box-shadow: 7px 7px 5px grey;
 }
 
-.ccontainer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 100vh;
-}
-
 .cbody{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: auto;
+    height: 8rem;
     justify-content: center;
     align-items: center;
 }
@@ -81,4 +75,15 @@
     border-radius: 0.2rem;
     font-family: 'Nunito Sans', sans-serif;
     cursor: pointer;
+}
+
+.body{
+    width: 100vw;
+    height: 100vh;
+}
+
+@media screen and (min-width:300px) and (max-width:500px) {
+    .body{
+        height: auto;
+    }
 }

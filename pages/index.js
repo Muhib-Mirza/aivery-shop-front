@@ -22,8 +22,8 @@ export default function Home() {
         <Carousel />
         <Card />
         </>
-        :<div class="loader">
-        <div class="circle"></div>
+        :<div className="loader">
+        <div className="circle"></div>
         </div>
       }
     </>

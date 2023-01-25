@@ -2,6 +2,8 @@ import Head from "next/head";
 import axios from "axios";
 import { useState } from "react";
 import style from "../../../styles/Add.module.css";
+import Router from "next/router";
+import {motion} from "framer-motion"
 
 const AddBird = () => {
     const [image,setImage] = useState(null);
@@ -34,6 +36,9 @@ const AddBird = () => {
             console.log(err);
         }
     }
+    const handleDelete = (e)=>{
+        Router.push("/admin/bird/allbird/delete");
+    }
     return ( 
         <>
         <Head>
@@ -43,12 +48,15 @@ const AddBird = () => {
         <link rel="icon" href="/parrot.png" />
       </Head>
         <div className={style.container}>
+            <button onClick={handleDelete} className={style.delete}>Delete</button>
         <form onSubmit={handleSubmit} className={style.form} >
-            <input className={`${style.input}`} type="text" name="birdid" placeholder="Enter Bird ID" value={bdata.birdid} onChange={handleChange} />
-            <input className={`${style.input} ${style.margin}`} type="text" name="birdname" placeholder="Enter Bird Name" value={bdata.birdname} onChange={handleChange} />
-            <input className={`${style.input} ${style.margin}`} type="number" name="birdcost" placeholder="Enter Bird Cost" value={bdata.birdcost} onChange={handleChange} />
+            <input className={`${style.input}`} type="text" name="birdid" placeholder="Enter Bird ID" value={bdata.birdid} onChange={handleChange} required />
+            <input className={`${style.input} ${style.margin}`} type="text" name="birdname" placeholder="Enter Bird Name" value={bdata.birdname} onChange={handleChange} required />
+            <input className={`${style.input} ${style.margin}`} type="number" name="birdcost" placeholder="Enter Bird Cost" value={bdata.birdcost} onChange={handleChange} required />
             <input className={`${style.file} ${style.margin}`} type="file" onChange={handleImage} />
-            <button className={`${style.margin} ${style.btn}`} type="submit">Submit</button>
+            <motion.button className={`${style.margin} ${style.btn}`} type="submit"
+            whileTap={{scale:0.8, opacity:0.8}}
+            >Submit</motion.button>
         </form>
         <div className={style.list}>
             <h3 className={style.head} >Bird ID</h3>

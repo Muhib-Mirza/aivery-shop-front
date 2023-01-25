@@ -1,11 +1,11 @@
-import Head from "next/head";
-import style from "../styles/Bird.module.css";
-import {motion} from "framer-motion";
 import axios from "axios";
+import Head from "next/head";
+import style from "../../styles/Bird.module.css";
+import {motion} from "framer-motion";
 
 export async function getServerSideProps(context){
-    const {bird} = context.query;
-    const res = await axios.get("https://morning-star-aivary.onrender.com/"+bird);
+    const {slug} = context.query;
+    const res = await axios.get("https://morning-star-aivary.onrender.com/"+slug);
     return{
     props:{
         data:res.data
@@ -22,12 +22,12 @@ const Test = ({data}) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/parrot.png" />
       </Head>
-      <div className={style.body}>
       <div className={`${style.container}`}>
     { data.map(curElem=>{
         const image = btoa(
-            String.fromCharCode(...new Uint32Array(curElem.image.data.data)));
+            String.fromCharCode(...new Uint8Array(curElem.image.data.data)));
             return <div key={curElem._id}>
+                <div className={style.ccontainer}>
                 <div className={style.card}>
                 <img src={`data:img/png;base64,${image}`} alt="" className={`${style.image}`} />
                 <div className={`${style.cbody}`}>
@@ -42,17 +42,17 @@ const Test = ({data}) => {
                     </span>
                     </div>
                     <a href="tel:+923070408790">
-                    <motion.button className={style.btn} whileHover={{scale:1.1, backgroundColor:"grey", color:"black",fontWeight:"bold"}} whileTap={{scale:0.8, opacity:0.8}} >
+                    <motion.button className={style.btn} whileHover={{scale:1.1, backgroundColor:"grey", color:"black",fontWeight:"bold"}} >
                         Buy Now
                     </motion.button>
                     </a>
                 </div>
             </div>
             </div>
+            </div>
     })
 }
     </div>       
-    </div>
         </>
      );
 }

@@ -81,6 +81,13 @@
     width: 15rem !important;
 }
 
+.delete{
+    position: absolute;
+    top: 5rem;
+    right: 4rem;
+    cursor:pointer;
+}
+
 @media screen and (min-width:300px) and (max-width:500px) {
     .ul{
         font-size: small;

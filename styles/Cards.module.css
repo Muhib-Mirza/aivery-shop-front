@@ -1,0 +1,96 @@
+.container{
+    width: 80vw;
+    margin:auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item{
+    width: 30vw;
+    margin: auto;
+    background-color: cadetblue;
+    text-align: center;
+    border-radius: 1rem;
+    height: 1.5rem;
+}
+
+.margn{
+    margin-top: 1rem;
+}
+
+.box{
+    background-color: red;
+    width: 10rem;
+    height: 10rem;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    /* position:absolute */
+}
+
+
+.card{
+    width: 12rem;
+    background-color: gainsboro;
+    height: 12rem;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+    border-radius: 0.5rem;
+    transition: all 0.8s ease-in-out;
+}
+.mgn{
+    margin-right: 2rem;
+}
+.cimage{
+    z-index: 10;
+    width: 10rem;
+    position: absolute;
+    top:50%;
+    left: 35%;
+    opacity: 1;
+    transition: all 0.8s ease-in;
+}
+
+.content{
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    opacity: 0;
+    transition: all 0.8s ease-in;
+}
+.content p{
+    font-size: large;
+    font-weight: bold;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+.aref{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 6rem;
+    height: 1.5rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+    background-color: whitesmoke;
+}
+
+.card:hover{
+    width: 16rem;
+    height: 15rem;
+}
+
+.card:hover .cimage{
+    left: 38%;
+    top: 55%;
+    scale: 1.2;
+}
+
+.card:hover .content{
+    opacity: 1;
+}

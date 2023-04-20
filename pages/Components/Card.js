@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import style from "../../styles/Card.module.css";
 import Image from "next/image";
+import { useState } from "react";
 
 const Card = () => {
   const animateLeft = {
@@ -23,14 +24,20 @@ const Card = () => {
       x: 0,
     },
   };
+  const [flag1,setFlag] = useState(false)
+  const [flag2,setFlag2] = useState(false)
+  const [flag3,setFlag3] = useState(false);
   return (
     <>
       <div className={style.container}>
         <motion.div
+        onViewportEnter={()=>setFlag(true)}
           className={style.topimg}
           variants={animateLeft}
           initial="init"
-          whileInView={"end"}
+          animate= {
+            flag1 ? "end" : "init"
+          }
           transition={{
             type: "spring",
             stiffness: 140,
@@ -51,7 +58,9 @@ const Card = () => {
           className={style.topimg}
           variants={animateRight}
           initial="init"
-          whileInView={"end"}
+          animate= {
+            flag1 ? "end" : "init"
+          }
           transition={{
             type: "spring",
             stiffness: 140,
@@ -69,10 +78,13 @@ const Card = () => {
           />
         </motion.div>
         <motion.div
+        onViewportEnter={()=>setFlag2(true)}
           className={style.botimg}
           variants={animateLeft}
           initial="init"
-          whileInView={"end"}
+          animate={
+            flag2 ? "end" : "init" 
+          }
           transition={{
             type: "spring",
             stiffness: 140,
@@ -93,7 +105,9 @@ const Card = () => {
           className={style.botimg}
           variants={animateRight}
           initial="init"
-          whileInView={"end"}
+          animate={
+            flag2 ? "end" : "init" 
+          }
           transition={{
             type: "spring",
             stiffness: 140,
@@ -111,10 +125,13 @@ const Card = () => {
           />
         </motion.div>
         <motion.div
+        onViewportEnter={()=>setFlag3(true)}
           className={style.botimg}
           variants={animateLeft}
           initial="init"
-          whileInView={"end"}
+          animate = {
+            flag3 ? "end" : "init"
+          }
           transition={{
             type: "spring",
             stiffness: 140,
@@ -135,7 +152,9 @@ const Card = () => {
           className={style.botimg}
           variants={animateRight}
           initial="init"
-          whileInView={"end"}
+          animate = {
+            flag3 ? "end" : "init"
+          }
           transition={{
             type: "spring",
             stiffness: 140,

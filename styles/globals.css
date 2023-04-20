@@ -14,33 +14,7 @@ body{
   display: none;
 }
 
-.legend{
-  font-family: 'Nunito Sans', sans-serif;
-}
-
 .toggle{
     transform: translateX(-20rem);
     transition: all 0.3s ease-in-out;
-}
-
-.loader{
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.circle{
-  height: 10rem;
-  width: 10rem;
-  display: inline-block;
-  border-radius: 50%;
-  border: 25px solid gray;
-  border-bottom: 25px solid #44efef;
-  animation: rotate 1.5s infinite;
-}
-@keyframes rotate {
-  100%{
-      transform: rotate(360deg);
-  }
 }

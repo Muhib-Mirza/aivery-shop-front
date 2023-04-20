@@ -4,6 +4,8 @@ import { useState } from "react";
 import style from "../../../styles/Add.module.css";
 import Router from "next/router";
 import {motion} from "framer-motion"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddBird = () => {
     const [image,setImage] = useState(null);
@@ -30,7 +32,14 @@ const AddBird = () => {
         formdata.append("birdcost", bdata.birdcost);
         try{
             axios.post("https://morning-star-aivary.onrender.com/adddata",formdata).then(res=>{
-                window.alert(res.data);
+                if(res.data.message === true){
+                    toast.success("Data Added",{
+                        autoClose:3000,
+                        theme:"dark"
+                    });
+                }else{
+                    toast.error("Operation Failed");
+                }
             })
         }catch(err){
             console.log(err);
@@ -76,6 +85,7 @@ const AddBird = () => {
         </ul>
         </div>
         </div>
+        <ToastContainer />
         </>
      );
 }

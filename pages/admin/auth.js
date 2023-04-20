@@ -3,6 +3,8 @@ import axios from "axios";
 import Router from "next/router";
 import React,{ useState } from "react";
 import style from "../../styles/Auth.module.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Auth = () => {
     const [user,setUser] = useState({
@@ -18,8 +20,8 @@ const Auth = () => {
     const handleSubmit = (e)=>{
         e.preventDefault();
         axios.post("https://morning-star-aivary.onrender.com/signin",user).then((result)=>{
-            if(result.data.message === "Error"){
-                window.alert("Please Enter Correct Credential");
+            if(result.data.message === false){
+                toast("Please Enter Correct Credential");
             }else{
                 Router.push("/admin/bird/8253148976253");
             }
@@ -40,6 +42,7 @@ const Auth = () => {
             <button type="submit" className={`${style.btn}`} >Submit</button>
         </form>
         </div>
+        <ToastContainer />
         </>
      );
 }

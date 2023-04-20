@@ -20,16 +20,8 @@ export default function Home() {
         <meta name="keywords" content="bird, Love bird, aivary, Morning star aivary" />
         <link rel="icon" href="/parrot.png" />
       </Head>
-      {
-        flag === 1?
-        <>
         <Carousel />
         <Card />
-        </>
-        :<div className="loader">
-        <div className="circle"></div>
-        </div>
-      }
     </>
   )
 }

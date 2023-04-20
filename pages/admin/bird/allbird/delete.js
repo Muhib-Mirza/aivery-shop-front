@@ -4,6 +4,8 @@ import Router from "next/router";
 import style from "../../../../styles/Bird.module.css";
 import { motion } from "framer-motion";
 import { BsFillTrash2Fill } from "react-icons/bs";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const getServerSideProps = async (context)=>{
     const response = await axios.get("https://morning-star-aivary.onrender.com/alldata");
@@ -17,10 +19,10 @@ export const getServerSideProps = async (context)=>{
 const Delete = (data) => {
     const hanldeDelete = (id)=>{
         axios.delete("https://morning-star-aivary.onrender.com/"+id).then(res=>{
-            if(!res){
-                window.alert("Something Went Wrong");
+            if(res.data.message === false){
+                toast.error("Something Went Wrong")
             }else{
-                window.alert("Card Deleted Sucessful");
+                toast.success("Card Deleted Successfully");
                 Router.reload();
             }
         })
@@ -69,6 +71,7 @@ const Delete = (data) => {
 }
     </div>       
     </div> 
+    <ToastContainer />
         </>
      );
 }

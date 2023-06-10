@@ -170,7 +170,9 @@ const Drawer = () => {
             </motion.div>
           </a>
         </ol>
+        <a href="/fisher">
         <h1 className={`${style.dheading} ${style.listheading}`}>Fishers</h1>
+        </a>
       </motion.div>
       </div>
     </>

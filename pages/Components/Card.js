@@ -30,6 +30,7 @@ const Card = () => {
   return (
     <>
       <div className={style.container}>
+        <a href="/gop">
         <motion.div
         onViewportEnter={()=>setFlag(true)}
           className={style.topimg}
@@ -54,6 +55,8 @@ const Card = () => {
             className={style.cardimg}
           />
         </motion.div>
+        </a>
+        <a href="/gosb">
         <motion.div
           className={style.topimg}
           variants={animateRight}
@@ -77,6 +80,8 @@ const Card = () => {
             className={style.cardimg}
           />
         </motion.div>
+        </a>
+        <a href="/gesb">
         <motion.div
         onViewportEnter={()=>setFlag2(true)}
           className={style.botimg}
@@ -101,6 +106,8 @@ const Card = () => {
             className={style.cardimg}
           />
         </motion.div>
+        </a>
+        <a href="/beo">
         <motion.div
           className={style.botimg}
           variants={animateRight}
@@ -124,6 +131,8 @@ const Card = () => {
             className={style.cardimg}
           />
         </motion.div>
+        </a>
+        <a href="/po">
         <motion.div
         onViewportEnter={()=>setFlag3(true)}
           className={style.botimg}
@@ -148,6 +157,8 @@ const Card = () => {
             className={style.cardimg}
           />
         </motion.div>
+        </a>
+        <a href="/fisher">
         <motion.div
           className={style.botimg}
           variants={animateRight}
@@ -171,6 +182,7 @@ const Card = () => {
             className={style.cardimg}
           />
         </motion.div>
+        </a>
       </div>
     </>
   );
